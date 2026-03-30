@@ -1,91 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Devine Cards</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Divine Cards</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial;
-      background: #0f0f0f;
-      color: white;
-    }
+<style>
+body{
+  margin:0;
+  font-family: 'Segoe UI';
+  background:#f7f3ef;
+}
 
-    header {
-      padding: 20px;
-      text-align: center;
-      font-size: 24px;
-      background: black;
-    }
+header{
+  display:flex;
+  justify-content:space-between;
+  padding:20px;
+  background:#fff;
+}
 
-    .hero {
-      text-align: center;
-      padding: 50px 20px;
-    }
+.logo{
+  font-weight:bold;
+  font-size:22px;
+}
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-      gap: 20px;
-      padding: 20px;
-    }
+nav a{
+  margin:0 10px;
+  text-decoration:none;
+  color:#333;
+}
 
-    .card {
-      background: #1a1a1a;
-      padding: 15px;
-      border-radius: 10px;
-      text-align: center;
-    }
+.hero{
+  padding:80px 20px;
+  text-align:center;
+  background:#f1e8dd;
+}
 
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-    }
+.hero h1{
+  font-size:36px;
+}
 
-    button {
-      margin-top: 10px;
-      padding: 10px 20px;
-      background: gold;
-      border: none;
-      cursor: pointer;
-    }
-  </style>
+.btn{
+  background:#b67c3d;
+  color:white;
+  padding:12px 25px;
+  border:none;
+  cursor:pointer;
+}
+
+.section{
+  padding:40px 20px;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:white;
+  padding:15px;
+  border-radius:10px;
+  text-align:center;
+}
+
+.card img{
+  width:100%;
+  border-radius:10px;
+}
+
+footer{
+  background:#111;
+  color:white;
+  padding:30px;
+  text-align:center;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  Devine Wedding Cards 💍
+  <div class="logo">Divine Cards</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Collection</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
 </header>
 
 <section class="hero">
   <h1>Premium Digital Wedding Invitations</h1>
-  <p>Customize & Get Delivered on WhatsApp</p>
+  <p>Elegant designs for your special day</p>
+  <button class="btn">Explore Collection</button>
 </section>
 
-<section class="cards">
+<section class="section">
+  <h2>Popular Wedding Cards</h2>
 
-  <div class="card">
-    <img src="https://via.placeholder.com/300x200">
-    <h3>Royal Wedding Card</h3>
-    <p>₹499</p>
-    <button onclick="orderNow()">Order Now</button>
+  <div class="cards">
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200">
+      <h3>Royal Card</h3>
+      <p>₹499</p>
+      <button class="btn" onclick="order()">Order</button>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200">
+      <h3>Modern Invite</h3>
+      <p>₹299</p>
+      <button class="btn" onclick="order()">Order</button>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200">
+      <h3>Luxury Gold</h3>
+      <p>₹999</p>
+      <button class="btn" onclick="order()">Order</button>
+    </div>
+
   </div>
-
-  <div class="card">
-    <img src="https://via.placeholder.com/300x200">
-    <h3>Modern Invite</h3>
-    <p>₹299</p>
-    <button onclick="orderNow()">Order Now</button>
-  </div>
-
 </section>
+
+<section class="section" style="background:#eee">
+  <h2>About Us</h2>
+  <p>We create premium wedding invitation cards with modern design & customization.</p>
+</section>
+
+<section class="section">
+  <h2>Contact Us</h2>
+  <p>Email: support@divinecards.in</p>
+</section>
+
+<footer>
+  © 2026 Divine Cards
+</footer>
 
 <script>
-function orderNow() {
-  window.open("https://wa.me/91XXXXXXXXXX?text=Hi%20I%20want%20to%20order%20a%20wedding%20card");
+function order(){
+  window.open("https://wa.me/91XXXXXXXXXX?text=Hi I want wedding card");
 }
 </script>
 
