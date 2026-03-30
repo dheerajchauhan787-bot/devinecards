@@ -5,146 +5,142 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Divine Cards</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
 <style>
-body{
-  margin:0;
-  font-family: 'Segoe UI';
-  background:#f7f3ef;
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f8f5f2;
 }
 
-header{
-  display:flex;
-  justify-content:space-between;
-  padding:20px;
-  background:#fff;
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  background: white;
+}
+nav a {
+  text-decoration: none;
+  margin-left: 20px;
+  color: black;
 }
 
-.logo{
-  font-weight:bold;
-  font-size:22px;
+/* HERO */
+.hero {
+  height: 80vh;
+  background: url('https://images.unsplash.com/photo-1520857014576-2c4f4c972b57') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 40px;
+}
+.hero button {
+  padding: 12px 25px;
+  background: #b57b3f;
+  border: none;
+  color: white;
+  margin-top: 20px;
 }
 
-nav a{
-  margin:0 10px;
-  text-decoration:none;
-  color:#333;
+/* CARDS */
+.section {
+  padding: 50px;
+}
+.cards {
+  display: flex;
+  gap: 20px;
+}
+.card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  flex: 1;
+  transition: 0.3s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card img {
+  width: 100%;
+}
+.card-content {
+  padding: 20px;
+}
+.btn {
+  background: #b57b3f;
+  color: white;
+  padding: 10px;
+  display: inline-block;
+  margin-top: 10px;
 }
 
-.hero{
-  padding:80px 20px;
-  text-align:center;
-  background:#f1e8dd;
-}
-
-.hero h1{
-  font-size:36px;
-}
-
-.btn{
-  background:#b67c3d;
-  color:white;
-  padding:12px 25px;
-  border:none;
-  cursor:pointer;
-}
-
-.section{
-  padding:40px 20px;
-}
-
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
-
-.card{
-  background:white;
-  padding:15px;
-  border-radius:10px;
-  text-align:center;
-}
-
-.card img{
-  width:100%;
-  border-radius:10px;
-}
-
-footer{
-  background:#111;
-  color:white;
-  padding:30px;
-  text-align:center;
+/* MOBILE */
+@media(max-width:768px){
+  .cards {
+    flex-direction: column;
+  }
 }
 </style>
-</head>
 
+</head>
 <body>
 
-<header>
-  <div class="logo">Divine Cards</div>
-  <nav>
+<nav>
+  <h2>Divine Cards</h2>
+  <div>
     <a href="#">Home</a>
     <a href="#">Collection</a>
-    <a href="#">About</a>
     <a href="#">Contact</a>
-  </nav>
-</header>
+  </div>
+</nav>
 
 <section class="hero">
-  <h1>Premium Digital Wedding Invitations</h1>
-  <p>Elegant designs for your special day</p>
-  <button class="btn">Explore Collection</button>
+  <div>
+    <h1>Premium Wedding Invitations</h1>
+    <p>Customize & Get Delivered on WhatsApp</p>
+    <button>Explore Collection</button>
+  </div>
 </section>
 
 <section class="section">
-  <h2>Popular Wedding Cards</h2>
-
+  <h2>Our Collection</h2>
   <div class="cards">
 
     <div class="card">
-      <img src="https://via.placeholder.com/300x200">
-      <h3>Royal Card</h3>
-      <p>₹499</p>
-      <button class="btn" onclick="order()">Order</button>
+      <img src="https://images.unsplash.com/photo-1607083206968-13611e3d76db">
+      <div class="card-content">
+        <h3>Royal Wedding Card</h3>
+        <p>₹499</p>
+        <a class="btn" href="https://wa.me/">Order on WhatsApp</a>
+      </div>
     </div>
 
     <div class="card">
-      <img src="https://via.placeholder.com/300x200">
-      <h3>Modern Invite</h3>
-      <p>₹299</p>
-      <button class="btn" onclick="order()">Order</button>
+      <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486">
+      <div class="card-content">
+        <h3>Modern Invite</h3>
+        <p>₹299</p>
+        <a class="btn" href="https://wa.me/">Order on WhatsApp</a>
+      </div>
     </div>
 
     <div class="card">
-      <img src="https://via.placeholder.com/300x200">
-      <h3>Luxury Gold</h3>
-      <p>₹999</p>
-      <button class="btn" onclick="order()">Order</button>
+      <img src="https://images.unsplash.com/photo-1519741497674-611481863552">
+      <div class="card-content">
+        <h3>Luxury Gold</h3>
+        <p>₹999</p>
+        <a class="btn" href="https://wa.me/">Order on WhatsApp</a>
+      </div>
     </div>
 
   </div>
 </section>
-
-<section class="section" style="background:#eee">
-  <h2>About Us</h2>
-  <p>We create premium wedding invitation cards with modern design & customization.</p>
-</section>
-
-<section class="section">
-  <h2>Contact Us</h2>
-  <p>Email: support@divinecards.in</p>
-</section>
-
-<footer>
-  © 2026 Divine Cards
-</footer>
-
-<script>
-function order(){
-  window.open("https://wa.me/91XXXXXXXXXX?text=Hi I want wedding card");
-}
-</script>
 
 </body>
 </html>
