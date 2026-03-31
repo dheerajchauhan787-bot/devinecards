@@ -3,144 +3,198 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Divine Cards</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<title>ShaadiCards</title>
+
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- TAILWIND CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
 
 <style>
 body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #f8f5f2;
+  font-family: 'Cormorant Garamond', serif;
+  background: #FFF8F0;
+  color: #800000;
 }
 
-/* NAVBAR */
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 50px;
-  background: white;
-}
-nav a {
-  text-decoration: none;
-  margin-left: 20px;
-  color: black;
+/* GOLD SHIMMER */
+.gold-btn {
+  background: linear-gradient(90deg, #D4AF37, #fff, #D4AF37);
+  background-size: 200%;
+  animation: shine 3s linear infinite;
 }
 
-/* HERO */
-.hero {
-  height: 80vh;
-  background: url('https://images.unsplash.com/photo-1520857014576-2c4f4c972b57') center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-}
-.hero h1 {
-  font-size: 40px;
-}
-.hero button {
-  padding: 12px 25px;
-  background: #b57b3f;
-  border: none;
-  color: white;
-  margin-top: 20px;
-}
-
-/* CARDS */
-.section {
-  padding: 50px;
-}
-.cards {
-  display: flex;
-  gap: 20px;
-}
-.card {
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  flex: 1;
-  transition: 0.3s;
-}
-.card:hover {
-  transform: scale(1.05);
-}
-.card img {
-  width: 100%;
-}
-.card-content {
-  padding: 20px;
-}
-.btn {
-  background: #b57b3f;
-  color: white;
-  padding: 10px;
-  display: inline-block;
-  margin-top: 10px;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  .cards {
-    flex-direction: column;
-  }
+@keyframes shine {
+  0% { background-position: -200%; }
+  100% { background-position: 200%; }
 }
 </style>
 
 </head>
+
 <body>
 
-<nav>
-  <h2>Divine Cards</h2>
-  <div>
-    <a href="#">Home</a>
-    <a href="#">Collection</a>
-    <a href="#">Contact</a>
-  </div>
-</nav>
+<!-- HERO -->
+<section class="h-screen flex flex-col items-center justify-center text-center bg-[#800000] text-white px-6">
+  <h1 class="text-5xl font-bold mb-4" style="font-family: Playfair Display;">ShaadiCards</h1>
+  <p class="text-lg mb-6">
+    Dil Se Banao, Yaadgaar Banao — Digital & Printable Wedding Cards
+  </p>
 
-<section class="hero">
-  <div>
-    <h1>Premium Wedding Invitations</h1>
-    <p>Customize & Get Delivered on WhatsApp</p>
-    <button>Explore Collection</button>
+  <div class="flex gap-4">
+    <button class="gold-btn px-6 py-3 rounded-full text-black">
+      Browse Cards
+    </button>
+    <a href="#customize" class="border px-6 py-3 rounded-full">
+      Customize Card
+    </a>
+  </div>
+</section>
+
+<!-- CATEGORY -->
+<section class="p-10">
+  <h2 class="text-3xl text-center mb-10" style="font-family: Playfair Display;">
+    Choose Your Category
+  </h2>
+
+  <div class="grid md:grid-cols-3 gap-6">
+
+    <div class="p-6 border-2 border-[#D4AF37] rounded-xl hover:scale-105 transition">
+      <h3 class="text-xl font-bold mb-3">🔴 Hindu Cards</h3>
+      <ul class="text-sm space-y-1">
+        <li>Ganesh Invitation</li>
+        <li>Mehendi</li>
+        <li>Haldi</li>
+        <li>Sangeet</li>
+        <li>Wedding</li>
+        <li>Reception</li>
+      </ul>
+    </div>
+
+    <div class="p-6 border-2 border-[#D4AF37] rounded-xl hover:scale-105 transition">
+      <h3 class="text-xl font-bold mb-3">🟢 Muslim Cards</h3>
+      <ul class="text-sm space-y-1">
+        <li>Nikah</li>
+        <li>Walima</li>
+        <li>Mehndi</li>
+        <li>Barat</li>
+        <li>Engagement</li>
+      </ul>
+    </div>
+
+    <div class="p-6 border-2 border-[#D4AF37] rounded-xl hover:scale-105 transition">
+      <h3 class="text-xl font-bold mb-3">✝️ Christian Cards</h3>
+      <ul class="text-sm space-y-1">
+        <li>Church Wedding</li>
+        <li>Reception</li>
+        <li>Save the Date</li>
+        <li>Bridal Shower</li>
+      </ul>
+    </div>
+
   </div>
 </section>
 
-<section class="section">
-  <h2>Our Collection</h2>
-  <div class="cards">
+<!-- GALLERY -->
+<section class="p-10 bg-[#fff3e6]">
+  <h2 class="text-3xl text-center mb-10" style="font-family: Playfair Display;">
+    Card Gallery
+  </h2>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1607083206968-13611e3d76db">
-      <div class="card-content">
-        <h3>Royal Wedding Card</h3>
-        <p>₹499</p>
-        <a class="btn" href="https://wa.me/">Order on WhatsApp</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486">
-      <div class="card-content">
-        <h3>Modern Invite</h3>
-        <p>₹299</p>
-        <a class="btn" href="https://wa.me/">Order on WhatsApp</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1519741497674-611481863552">
-      <div class="card-content">
-        <h3>Luxury Gold</h3>
-        <p>₹999</p>
-        <a class="btn" href="https://wa.me/">Order on WhatsApp</a>
-      </div>
-    </div>
-
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="h-40 bg-gradient-to-br from-[#800000] to-[#D4AF37] text-white flex items-center justify-center rounded-lg border-2 border-[#D4AF37]">Card 1</div>
+    <div class="h-40 bg-gradient-to-br from-[#800000] to-[#D4AF37] text-white flex items-center justify-center rounded-lg border-2 border-[#D4AF37]">Card 2</div>
+    <div class="h-40 bg-gradient-to-br from-[#800000] to-[#D4AF37] text-white flex items-center justify-center rounded-lg border-2 border-[#D4AF37]">Card 3</div>
+    <div class="h-40 bg-gradient-to-br from-[#800000] to-[#D4AF37] text-white flex items-center justify-center rounded-lg border-2 border-[#D4AF37]">Card 4</div>
   </div>
 </section>
+
+<!-- HOW IT WORKS -->
+<section class="p-10">
+  <h2 class="text-3xl text-center mb-10">How It Works</h2>
+  <div class="grid md:grid-cols-4 gap-6 text-center">
+    <div>📋 Choose</div>
+    <div>✏️ Customize</div>
+    <div>💬 WhatsApp</div>
+    <div>📲 Receive</div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section id="customize" class="p-10 bg-[#fff3e6]">
+  <h2 class="text-3xl text-center mb-10">Apne Hisaab Se Card Banwao 💌</h2>
+
+  <div class="max-w-xl mx-auto grid gap-4">
+    <input id="bride" placeholder="Bride Name" class="p-3 border">
+    <input id="groom" placeholder="Groom Name" class="p-3 border">
+    <input id="date" placeholder="Wedding Date" class="p-3 border">
+    <input id="venue" placeholder="Venue" class="p-3 border">
+    <input id="religion" placeholder="Religion" class="p-3 border">
+    <input id="color" placeholder="Color Preference" class="p-3 border">
+    <textarea id="message" placeholder="Custom Message" class="p-3 border"></textarea>
+    <input id="phone" placeholder="Phone Number" class="p-3 border">
+
+    <button onclick="sendWhatsApp()" class="bg-green-500 text-white py-3 rounded-lg">
+      Send Details on WhatsApp
+    </button>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="p-10">
+  <h2 class="text-3xl text-center mb-10">Happy Couples</h2>
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="p-6 border rounded-lg">
+      ★★★★★<br>Amazing cards!<br><b>Rahul & Priya</b>
+    </div>
+    <div class="p-6 border rounded-lg">
+      ★★★★★<br>Best service!<br><b>Ali & Sara</b>
+    </div>
+    <div class="p-6 border rounded-lg">
+      ★★★★★<br>Beautiful designs!<br><b>John & Maria</b>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-[#800000] text-white text-center p-6">
+  <p>ShaadiCards — Dil Se Shaadi</p>
+  <p>© 2025 ShaadiCards</p>
+</footer>
+
+<!-- STICKY WHATSAPP -->
+<a href="#" onclick="sendWhatsApp()" 
+class="fixed bottom-5 right-5 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg">
+💬 WhatsApp
+</a>
+
+<script>
+function sendWhatsApp() {
+  const bride = document.getElementById('bride').value;
+  const groom = document.getElementById('groom').value;
+  const date = document.getElementById('date').value;
+  const venue = document.getElementById('venue').value;
+  const religion = document.getElementById('religion').value;
+  const color = document.getElementById('color').value;
+  const message = document.getElementById('message').value;
+  const phone = document.getElementById('phone').value;
+
+  const text = `Hello! I want to customize a wedding card.
+
+Bride: ${bride}
+Groom: ${groom}
+Date: ${date}
+Venue: ${venue}
+Religion: ${religion}
+Color: ${color}
+Message: ${message}
+Phone: ${phone}`;
+
+  window.open(`https://wa.me/91XXXXXXXXXX?text=${encodeURIComponent(text)}`, '_blank');
+}
+</script>
 
 </body>
 </html>
